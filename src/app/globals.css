@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-gold: #FDB515;
+  --color-orange: #FF8A00;
+  --color-burgundy: #5B0017;
+  --color-deep-red: #7A001C;
+  --color-black: #111111;
+  --color-white: #FFFFFF;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #111111;
+  }
+
+  body {
+    background-color: #111111;
+    color: #FFFFFF;
+    font-family: var(--font-poppins), sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: rgba(253, 181, 21, 0.3);
+    color: #FFFFFF;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #111111;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(253, 181, 21, 0.3);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(253, 181, 21, 0.5);
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #FDB515 0%, #FF8A00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .diagonal-bg {
+    background: linear-gradient(135deg, #FDB515 0%, #FDB515 42%, #5B0017 42%, #5B0017 58%, #7A001C 58%, #7A001C 100%);
+  }
+
+  .glow-gold {
+    filter: drop-shadow(0 0 30px rgba(253, 181, 21, 0.3));
+  }
+
+  .glow-orange {
+    filter: drop-shadow(0 0 30px rgba(255, 138, 0, 0.3));
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-shadow-gold {
+    text-shadow: 0 0 20px rgba(253, 181, 21, 0.3);
+  }
+}
