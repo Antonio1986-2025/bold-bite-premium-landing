@@ -36,7 +36,7 @@ export default function WhyChooseUs() {
                 key={feature.id}
                 initial={{ opacity: 0, scale: 0.85 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, margin: '-60px' }}
+                viewport={{ once: true, margin: '-80px' }}
                 transition={{
                   duration: 0.5,
                   delay: index * 0.12,

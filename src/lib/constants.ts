@@ -16,7 +16,6 @@ export const NAV_LINKS: NavLink[] = [
   { label: 'Menu', href: '#menu' },
   { label: 'Offers', href: '#offers' },
   { label: 'Delivery', href: '#delivery' },
-  { label: 'Contact', href: '#contact' },
 ];
 
 // ─── HERO ────────────────────────────────────────────────────
@@ -278,11 +277,12 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
   },
 ];
 
+// TODO: Replace '#' with real social media URLs for your brand
 export const SOCIAL_LINKS: SocialLink[] = [
-  { label: 'Instagram', href: '#', icon: 'Instagram' },
-  { label: 'Twitter', href: '#', icon: 'Twitter' },
-  { label: 'YouTube', href: '#', icon: 'Youtube' },
-  { label: 'TikTok', href: '#', icon: 'Music2' },
+  { label: 'Instagram', href: 'https://instagram.com/', icon: 'Instagram' },
+  { label: 'Twitter', href: 'https://twitter.com/', icon: 'Twitter' },
+  { label: 'YouTube', href: 'https://youtube.com/', icon: 'Youtube' },
+  { label: 'TikTok', href: 'https://tiktok.com/', icon: 'Music2' },
 ];
 
 // ─── DELIVERY ────────────────────────────────────────────────

@@ -20,6 +20,13 @@ const config: Config = {
         bebas: ['var(--font-bebas)', 'sans-serif'],
         poppins: ['var(--font-poppins)', 'sans-serif'],
       },
+      fontSize: {
+        display: ['clamp(3.5rem, 8vw, 8rem)', { lineHeight: '0.95', letterSpacing: '-0.02em', fontWeight: '700' }],
+        h1: ['clamp(2.5rem, 5vw, 4rem)', { lineHeight: '1.1', fontWeight: '700' }],
+        h2: ['clamp(2rem, 3vw, 2.5rem)', { lineHeight: '1.1', fontWeight: '700' }],
+        body: ['1.125rem', { lineHeight: '1.7' }],
+        small: ['0.875rem', { lineHeight: '1.6' }],
+      },
       animation: {
         float: 'float 6s ease-in-out infinite',
         'float-delayed': 'float 7s ease-in-out 1s infinite',

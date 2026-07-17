@@ -11,7 +11,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden bg-black"
+      className="relative flex h-screen items-center overflow-hidden bg-black"
     >
       {/* ── Burger background (full-bleed) ─── */}
       <HeroAnimation images={HERO_IMAGES} frameMs={HERO_FRAME_MS} />
@@ -29,24 +29,24 @@ export default function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="max-w-2xl"
+          className="max-w-[500px]"
         >
           {/* Badge */}
           <motion.span
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mb-6 inline-block rounded-full border border-gold/40 bg-gold/10 px-5 py-2 font-poppins text-xs font-semibold uppercase tracking-[0.3em] text-gold backdrop-blur-sm"
+            className="mb-6 inline-block rounded-full border border-gold/40 bg-gold/10 px-6 py-2 font-poppins text-xs font-semibold uppercase tracking-[0.3em] text-gold backdrop-blur-sm"
           >
             Premium Burgers
           </motion.span>
 
           {/* Headline */}
           <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="font-bebas text-[clamp(3.5rem,8vw,8rem)] leading-[1.05] tracking-tight text-white"
+            initial={{ opacity: 0, y: 30, filter: 'blur(10px)' }}
+            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.76, 0, 0.24, 1] }}
+            className="font-bebas text-[clamp(3.5rem,8vw,8rem)] leading-[1.05] tracking-[-0.02em] text-white"
           >
             <span className="block">BOLD</span>
             <span className="block text-gold">FLAVOR</span>
@@ -70,7 +70,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="mt-10 flex flex-wrap gap-4"
+            className="mt-12 flex flex-wrap gap-4"
           >
             <MagneticButton variant="primary" size="lg" href="#menu">
               Order Now
@@ -87,18 +87,18 @@ export default function HeroSection() {
             transition={{ duration: 0.5, delay: 0.8 }}
             className="mt-12 flex items-center gap-8"
           >
-            <div className="flex -space-x-3">
+            <div className="flex -space-x-4">
               {[1, 2, 3, 4].map((i) => (
                 <div
                   key={i}
-                  className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-black/80 bg-gray-500 text-xs font-bold text-white"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-black/80 bg-white/10 text-xs font-bold text-white"
                 >
                   {String.fromCharCode(64 + i)}
                 </div>
               ))}
             </div>
             <div>
-              <div className="flex gap-0.5">
+              <div className="flex gap-1">
                 {[1, 2, 3, 4, 5].map((s) => (
                   <svg key={s} className="h-4 w-4 fill-gold" viewBox="0 0 20 20">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />

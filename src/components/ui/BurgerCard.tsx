@@ -14,7 +14,7 @@ export default function BurgerCard({ burger, index }: BurgerCardProps) {
     <motion.div
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-60px' }}
+      viewport={{ once: true, margin: '-80px' }}
       transition={{
         duration: 0.6,
         delay: index * 0.15,
@@ -55,7 +55,7 @@ export default function BurgerCard({ burger, index }: BurgerCardProps) {
       </div>
 
       {/* Content */}
-      <div className="flex flex-1 flex-col gap-3 p-6">
+      <div className="flex flex-1 flex-col gap-4 p-8">
         <div className="flex items-start justify-between">
           <h3 className="font-bebas text-2xl tracking-wide text-white">{burger.name}</h3>
           <span className="font-poppins text-xl font-bold text-gold">

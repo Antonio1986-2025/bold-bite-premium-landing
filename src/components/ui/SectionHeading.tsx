@@ -20,7 +20,7 @@ export default function SectionHeading({
   className = '',
 }: SectionHeadingProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-60px' });
+  const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   const alignmentClass = align === 'center' ? 'text-center items-center' : 'text-left items-start';
 
@@ -38,9 +38,7 @@ export default function SectionHeading({
         </span>
       )}
       <h2
-        className={`font-bebas text-5xl leading-tight md:text-6xl lg:text-7xl ${
-          light ? 'text-white' : 'text-white'
-        }`}
+        className="font-bebas text-[clamp(2.5rem,5vw,4rem)] leading-[1.1] text-white"
       >
         {title}
       </h2>

@@ -17,6 +17,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://boldbite.vercel.app'),
   title: 'Bold Bite | Premium Burgers with Unforgettable Taste',
   description:
     'Experience bold flavor in every bite. Handcrafted premium burgers made with the finest ingredients. Order online for lightning-fast delivery.',
@@ -34,11 +35,16 @@ export const metadata: Metadata = {
       'Experience bold flavor in every bite. Handcrafted premium burgers made with the finest ingredients.',
     type: 'website',
     locale: 'en_US',
+    siteName: 'Bold Bite',
+    // TODO: Replace with your actual OG image URL
+    images: [{ url: '/hero/000.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Bold Bite | Premium Burgers',
     description: 'Handcrafted premium burgers with unforgettable taste.',
+    // TODO: Replace with your actual Twitter image URL
+    images: ['/hero/000.jpg'],
   },
   robots: {
     index: true,

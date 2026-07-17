@@ -33,7 +33,7 @@ export default function Gallery() {
                 key={image.id}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, margin: '-40px' }}
+                viewport={{ once: true, margin: '-80px' }}
                 transition={{
                   duration: 0.5,
                   delay: index * 0.08,
